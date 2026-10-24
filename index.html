@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5f0">
+  <meta name="description" content="Conoce nuestros servicios y solicita información por WhatsApp.">
+  <title>Servicios con Estilo | Atención personalizada</title>
+
+  <style>
+    :root {
+      --fondo: #f8f5f0;
+      --crema: #eee6db;
+      --texto: #342e29;
+      --secundario: #71675f;
+      --dorado: #92754d;
+      --verde: #315b48;
+      --blanco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 22px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      border-bottom: 1px solid #e7ded2;
+    }
+
+    .marca {
+      color: var(--texto);
+      font-family: Georgia, serif;
+      font-size: 21px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: var(--secundario);
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    .portada {
+      padding: 95px 20px 90px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at top, #eee3d4, transparent 65%),
+        var(--fondo);
+    }
+
+    .etiqueta {
+      color: var(--dorado);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: clamp(40px, 7vw, 68px);
+      margin: 20px 0;
+    }
+
+    .portada p {
+      max-width: 540px;
+      margin: 0 auto 28px;
+      color: var(--secundario);
+    }
+
+    .boton {
+      display: inline-block;
+      background: var(--verde);
+      color: var(--blanco);
+      padding: 14px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: opacity 0.2s;
+    }
+
+    .boton:hover {
+      opacity: 0.85;
+    }
+
+    section {
+      padding: 70px 7%;
+      text-align: center;
+    }
+
+    .intro {
+      max-width: 600px;
+      margin: 0 auto 35px;
+      color: var(--secundario);
+    }
+
+    .servicios {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      max-width: 1050px;
+      margin: 35px auto 0;
+      text-align: left;
+    }
+
+    .tarjeta {
+      padding: 28px;
+      background: var(--blanco);
+      border: 1px solid #e9e0d5;
+      border-radius: 8px;
+    }
+
+    .numero {
+      color: var(--dorado);
+      font-family: Georgia, serif;
+      font-size: 27px;
+    }
+
+    .tarjeta h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .tarjeta p {
+      color: var(--secundario);
+      font-size: 14px;
+    }
+
+    .sobre {
+      background: var(--crema);
+    }
+
+    .sobre-contenido {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .contacto {
+      padding: 85px 20px;
+    }
+
+    footer {
+      padding: 25px 15px;
+      text-align: center;
+      border-top: 1px solid #e7ded2;
+      color: var(--secundario);
+      font-size: 13px;
+    }
+
+    .flotante {
+      position: fixed;
+      bottom: 20px;
+      right: 18px;
+      z-index: 10;
+      box-shadow: 0 4px 16px #0002;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .portada {
+        padding: 65px 20px;
+      }
+
+      .servicios {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 55px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="marca" href="#">TU MARCA</a>
+    <nav aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="portada">
+      <div class="etiqueta">Bienvenido/a</div>
+      <h1>Calidad y atención<br>en cada detalle.</h1>
+      <p>
+        Descubre nuestros servicios y recibe una atención
+        personalizada. Estamos aquí para ayudarte.
+      </p>
+      <a class="boton whatsapp" href="#contacto">
+        Solicitar información
+      </a>
+    </section>
+
+    <section id="servicios">
+      <div class="etiqueta">Lo que hacemos</div>
+      <h2>Nuestros servicios</h2>
+      <p class="intro">
+        Soluciones pensadas para ti, con compromiso,
+        cuidado y atención personalizada.
+      </p>
+
+      <div class="servicios">
+        <article class="tarjeta">
+          <div class="numero">01</div>
+          <h3>Servicio principal</h3>
+          <p>
+            Describe aquí tu servicio más importante y
+            cómo puede ayudar a tus clientes.
+          </p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="numero">02</div>
+          <h3>Servicio adicional</h3>
+          <p>
+            Explica qué incluye este servicio y qué lo
+            hace especial.
+          </p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="numero">03</div>
+          <h3>Atención personalizada</h3>
+          <p>
+            Comparte otra opción, paquete o modalidad
+            de atención disponible.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="nosotros" class="sobre">
+      <div class="sobre-contenido">
+        <div class="etiqueta">Nuestra esencia</div>
+        <h2>Un servicio pensado para ti</h2>
+        <p>
+          Nos importa ofrecer una experiencia agradable,
+          resolver tus dudas y ayudarte a encontrar la
+          opción que mejor se adapte a tus necesidades.
+        </p>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <div class="etiqueta">Estamos para ayudarte</div>
+      <h2>Hablemos por WhatsApp</h2>
+      <p class="intro">
+        Solicita información, consulta disponibilidad
+        o pregunta por nuestros servicios.
+      </p>
+      <a class="boton whatsapp" href="#"
+         target="_blank" rel="noopener">
+        Contactar por WhatsApp
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="anio"></span> TU MARCA. Todos los derechos reservados.</p>
+  </footer>
+
+  <a class="boton flotante whatsapp" href="#"
+     target="_blank" rel="noopener"
+     aria-label="Contactar por WhatsApp">
+    WhatsApp
+  </a>
+
+  <script>
+    // Reemplaza este número por el tuyo.
+    // Incluye el código de país, sin +, espacios ni guiones.
+    const telefono = "52TU_NUMERO";
+
+    const mensaje = encodeURIComponent(
+      "Hola, vi su página web y me gustaría recibir información sobre sus servicios."
+    );
+
+    document.querySelectorAll(".whatsapp").forEach((boton) => {
+      boton.href = https://wa.me/${telefono}?text=${mensaje};
+      boton.target = "_blank";
+      boton.rel = "noopener";
+    });
+
+    document.getElementById("anio").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
