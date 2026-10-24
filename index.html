@@ -28,19 +28,26 @@
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: var(--fondo);
       color: var(--texto);
       line-height: 1.7;
     }
 
     header {
-      padding: 22px 7%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 15px;
-      border-bottom: 1px solid #e7ded2;
+      align-items: center;
+
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+
+      padding: 20px 7%;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
     }
 
     .marca {
@@ -100,6 +107,7 @@
       text-decoration: none;
       font-weight: bold;
       transition: opacity 0.2s;
+      transform: translateY(-3px);
     }
 
     .boton:hover {
@@ -131,6 +139,8 @@
       background: var(--blanco);
       border: 1px solid #e9e0d5;
       border-radius: 8px;
+      transform: translateY(-10px);
+      box-shadow:0 20px 40px rgba(0,0,0,0.12);
     }
 
     .numero {
@@ -150,7 +160,14 @@
     }
 
     .sobre {
-      background: var(--crema);
+        background:
+        linear-gradient(
+        135deg,
+    #0f172a,
+    #1e293b
+  );
+
+  color: white;
     }
 
     .sobre-contenido {
@@ -197,49 +214,50 @@
 
       section {
         padding: 55px 6%;
+
       }
     }
   </style>
 </head>
 
 <body>
+  
   <header>
-    <a class="marca" href="#">TU MARCA</a>
+    <a class="marca" href="#">PJM</a>
     <nav aria-label="Navegación principal">
-      <a href="#servicios">Servicios</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#servicios">Services</a>
+      <a href="#nosotros">Us</a>
+      <a href="#contacto">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="portada">
-      <div class="etiqueta">Bienvenido/a</div>
-      <h1>Calidad y atención<br>en cada detalle.</h1>
+      <div class="etiqueta">Welcome</div>
+      <h1>Quality and service<br>in every detail.</h1>
       <p>
-        Descubre nuestros servicios y recibe una atención
-        personalizada. Estamos aquí para ayudarte.
+        Discover our services and receive personalized attention.
+We are here to help you.
       </p>
       <a class="boton whatsapp" href="#contacto">
-        Solicitar información
+        Request information
       </a>
     </section>
 
     <section id="servicios">
-      <div class="etiqueta">Lo que hacemos</div>
-      <h2>Nuestros servicios</h2>
+      <div class="etiqueta">What we do</div>
+      <h2>Our services</h2>
       <p class="intro">
-        Soluciones pensadas para ti, con compromiso,
-        cuidado y atención personalizada.
+      Solutions designed for you, with commitment,
+      care, and personalized attention.
       </p>
 
       <div class="servicios">
         <article class="tarjeta">
           <div class="numero">01</div>
-          <h3>Servicio principal</h3>
+          <h3>Main service</h3>
           <p>
-            Describe aquí tu servicio más importante y
-            cómo puede ayudar a tus clientes.
+            DescriPCION DEL tu servicio .
           </p>
         </article>
 
@@ -265,32 +283,33 @@
 
     <section id="nosotros" class="sobre">
       <div class="sobre-contenido">
-        <div class="etiqueta">Nuestra esencia</div>
-        <h2>Un servicio pensado para ti</h2>
+        <div class="etiqueta">Our essence</div>
+        <h2>A service designed for you</h2>
         <p>
-          Nos importa ofrecer una experiencia agradable,
-          resolver tus dudas y ayudarte a encontrar la
-          opción que mejor se adapte a tus necesidades.
+          We care about providing a pleasant experience,
+          answering your questions, and helping you find the
+          option that best suits your needs.
         </p>
       </div>
     </section>
 
     <section id="contacto" class="contacto">
-      <div class="etiqueta">Estamos para ayudarte</div>
-      <h2>Hablemos por WhatsApp</h2>
+      <div class="etiqueta">
+We are here to help you</div>
+      <h2>Let’s talk on WhatsApp</h2>
       <p class="intro">
-        Solicita información, consulta disponibilidad
-        o pregunta por nuestros servicios.
+        Request information, check availability,
+        or ask about our services.
       </p>
       <a class="boton whatsapp" href="#"
          target="_blank" rel="noopener">
-        Contactar por WhatsApp
+        Contact via WhatsApp
       </a>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="anio"></span> TU MARCA. Todos los derechos reservados.</p>
+    <p>© <span id="anio"></span> PJM . Todos los derechos reservados.</p>
   </footer>
 
   <a class="boton flotante whatsapp" href="#"
@@ -302,14 +321,14 @@
   <script>
     // Reemplaza este número por el tuyo.
     // Incluye el código de país, sin +, espacios ni guiones.
-    const telefono = "52TU_NUMERO";
+    const telefono = "+526341084466";
 
     const mensaje = encodeURIComponent(
       "Hola, vi su página web y me gustaría recibir información sobre sus servicios."
     );
 
     document.querySelectorAll(".whatsapp").forEach((boton) => {
-      boton.href = https://wa.me/${telefono}?text=${mensaje};
+      boton.href = `https://wa.me/${telefono}?text=${mensaje}`;
       boton.target = "_blank";
       boton.rel = "noopener";
     });
